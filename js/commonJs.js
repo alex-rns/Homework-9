@@ -30,6 +30,6 @@ $(document).ready(function () {
     });
 
     $('.clone-this').on('click',function () {
-        $(this).clone().prependTo('.clone-this')
-    })
+        $(this).clone().text('cloned').after('clone-this')
+    });
 });
