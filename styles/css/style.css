@@ -135,12 +135,14 @@ h1 {
   padding: 30px;
   font-weight: bold; }
 
-li, p {
+p {
   padding: 20px; }
 
-button {
+button, span {
+  display: block;
   min-width: 200px;
-  padding: 1.2em 3rem; }
+  padding: 1.2em 3rem;
+  margin: 30px 0; }
 
 .button-full-width {
   width: 100%; }
@@ -152,3 +154,12 @@ button {
 
 .toggle-class {
   text-transform: uppercase; }
+
+.hidden {
+  display: none; }
+
+span {
+  text-align: center;
+  margin-top: 0;
+  background: lightgray;
+  display: inline-block; }
