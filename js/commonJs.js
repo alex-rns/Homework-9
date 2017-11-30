@@ -161,4 +161,32 @@ $(document).ready(function () {
     $('.remove').on('click', function () {
         $('h1').remove()
     });
+
+    $('.remove-attr').on('click', function () {
+        $(this).removeAttr('id')
+    });
+
+    $(window).resize(function () {
+        alert("Зазмер окна был изменён")
+    });
+
+    $('textarea').scroll( function () {
+        $(this).css('font-size', '25px').attr('cols', '40')
+    });
+
+    $('.scroll-top').on('click', function () {
+        $(document).scrollTop(0)
+    });
+
+    $('.slide-up').on('click', function () {
+        $(this).slideUp('slow')
+    });
+
+    $('.slide-down').on('click', function () {
+        $('.slide-up').slideDown(1500)
+    });
+
+    $('.slide-toggle').on('click', function () {
+        $('button:not(.slide-toggle), textarea').slideToggle(500)
+    });
 });

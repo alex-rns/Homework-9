@@ -163,3 +163,6 @@ span {
   margin-top: 0;
   background: lightgray;
   display: inline-block; }
+
+textarea {
+  max-height: 40px; }
