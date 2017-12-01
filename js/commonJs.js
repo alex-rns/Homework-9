@@ -203,7 +203,7 @@ $(document).ready(function () {
     /*====================== index-3 ===========================*/
 
     //---Вывод в консоль значения изменяемого поля/селекта/кнопки-----
-    $('input, select').on('.change', function () {
+    $('input, select').on('change', function () {
         console.log('Значение изменилось на: ' + $(this).val())
     });
 
@@ -214,7 +214,7 @@ $(document).ready(function () {
     });
 
     //------------Дублирование значения в другое поле-------------
-    $('.form-name').on('.change', function () {
+    $('.form-name').on('change', function () {
         $('.form-clone-name').val($(this).val())
     });
 
