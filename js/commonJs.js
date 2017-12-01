@@ -208,8 +208,8 @@ $(document).ready(function () {
     });
 
     //-------------------Действия при Submit'е------------------
-    $('form').on('submit', function (event) {
-        event.preventDefault();
+    $('form').on('submit', function (e) {
+        e.preventDefault();
         console.log('Все значения формы: ' + $(this).serialize())
     });
 
