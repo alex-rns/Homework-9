@@ -196,13 +196,15 @@ $(document).ready(function () {
 
     /*---------------------- index-3 -----------------------*/
     $('input, select').change(function () {
-        console.log($(this).val)
+        console.log($(this).val())
     });
 
     $('form').on('submit', function (e) {
         e.preventDefault();
-
         console.log($(this).serialize())
-    })
+    });
 
+    $('.form-name').change(function () {
+        $('.form-clone-name').val($(this).val())
+    })
 });
