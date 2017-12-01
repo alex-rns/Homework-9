@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    //---------------------- index-1 -----------------------
+    //==========================index-1=========================
 
     //-------------------------addClass--------------------
     $('.default-class').on('click', function () {
@@ -94,9 +94,6 @@ $(document).ready(function () {
         let dataNext = $(this).next().text();
         let dataText = $(this).text();
 
-
-
-
         console.log('Высота:' + dataHeigth + ',',
             'Ширина:' + dataWidth + ',',
             'Абсолютная позиция по х:' + dataposition.left + ',',
@@ -109,7 +106,7 @@ $(document).ready(function () {
         )
     });
 
-    /*---------------------- index-2 -----------------------*/
+    /*====================index-2==========================*/
 
 
     //-------------------------data()--------------------
@@ -152,59 +149,87 @@ $(document).ready(function () {
         console.log($(this).index())
     });
 
-
+    //-------------------------off()--------------------
     $('.off').on('click', function () {
         $('button').off();
     });
 
+    //-------------------------prop)--------------------
     $('.prop').on('click', function () {
         console.log($(this).prop('hidden'))
     });
 
+    //-------------------------remove()--------------------
     $('.remove').on('click', function () {
         $('h1').remove()
     });
 
+    //-------------------------removeAttr)--------------------
     $('.remove-attr').on('click', function () {
         $(this).removeAttr('id')
     });
 
+    //-------------------------resize)--------------------
     $(window).resize(function () {
         alert("Зазмер окна был изменён")
     });
 
+    //-------------------------scroll()--------------------
     $('textarea').scroll( function () {
         $(this).css('font-size', '25px').attr('cols', '40')
     });
 
+    //-------------------------scrollTop()--------------------
     $('.scroll-top').on('click', function () {
         $(document).scrollTop(0)
     });
 
+    //-------------------------slideUp()--------------------
     $('.slide-up').on('click', function () {
         $(this).slideUp('slow')
     });
 
+    //-------------------------slideDown()--------------------
     $('.slide-down').on('click', function () {
         $('.slide-up').slideDown(1500)
     });
 
+    //-------------------------slideToggle()--------------------
     $('.slide-toggle').on('click', function () {
         $('button:not(.slide-toggle), textarea').slideToggle(500)
     });
 
 
-    /*---------------------- index-3 -----------------------*/
+    /*====================== index-3 ===========================*/
+
+    //---Вывод в консоль значения изменяемого поля/селекта/кнопки-----
     $('input, select').change(function () {
-        console.log($(this).val())
+        console.log('Значение изменилось на: ' + $(this).val())
     });
 
-    $('form').on('submit', function (e) {
-        e.preventDefault();
-        console.log($(this).serialize())
+    //-------------------Действия при Submit'е------------------
+    $('form').on('submit', function (event) {
+        event.preventDefault();
+        console.log('Все значения формы: ' + $(this).serialize())
     });
 
+    //------------Дублирование значения в другое поле-------------
     $('.form-name').change(function () {
         $('.form-clone-name').val($(this).val())
-    })
+    });
+
+    //-------------------------keydown()--------------------
+    $('.form-name').keydown(function (e) {
+        console.log('keydown: ' + e.which)
+    });
+
+    //-------------------------keyup()--------------------
+    $('.form-account').keyup(function (e) {
+        console.log('keyup: ' + e.which)
+    });
+
+    //-------------------------keypress()--------------------
+    $('.form-password').keypress(function (e) {
+        console.log('keypress: ' + e.which)
+    });
 });
