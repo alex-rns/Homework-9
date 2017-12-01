@@ -94,6 +94,9 @@ $(document).ready(function () {
         let dataNext = $(this).next().text();
         let dataText = $(this).text();
 
+
+
+
         console.log('Высота:' + dataHeigth + ',',
             'Ширина:' + dataWidth + ',',
             'Абсолютная позиция по х:' + dataposition.left + ',',
@@ -189,4 +192,17 @@ $(document).ready(function () {
     $('.slide-toggle').on('click', function () {
         $('button:not(.slide-toggle), textarea').slideToggle(500)
     });
+
+
+    /*---------------------- index-3 -----------------------*/
+    $('input, select').change(function () {
+        console.log($(this).val)
+    });
+
+    $('form').on('submit', function (e) {
+        e.preventDefault();
+
+        console.log($(this).serialize())
+    })
+
 });
