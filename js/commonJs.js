@@ -170,12 +170,12 @@ $(document).ready(function () {
     });
 
     //-------------------------resize)--------------------
-    $(window).resize(function () {
+    $(window).on('resize', function () {
         alert("Зазмер окна был изменён")
     });
 
     //-------------------------scroll()--------------------
-    $('textarea').scroll( function () {
+    $('textarea').on('scroll', function () {
         $(this).css('font-size', '25px').attr('cols', '40')
     });
 
@@ -219,17 +219,17 @@ $(document).ready(function () {
     });
 
     //-------------------------keydown()--------------------
-    $('.form-name').keydown(function (e) {
+    $('.form-name').on('keydown', function (e) {
         console.log('keydown: ' + e.which)
     });
 
     //-------------------------keyup()--------------------
-    $('.form-account').keyup(function (e) {
+    $('.form-account').on('keyup', function (e) {
         console.log('keyup: ' + e.which)
     });
 
     //-------------------------keypress()--------------------
-    $('.form-password').keypress(function (e) {
+    $('.form-password').on('keypress', function (e) {
         console.log('keypress: ' + e.which)
     });
 });
